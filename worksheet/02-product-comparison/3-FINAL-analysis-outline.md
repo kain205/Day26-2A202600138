@@ -2,267 +2,232 @@
 artifact: 3 — Outline 5 mục cho slide deck Analysis Report
 bai-tap: 2 — Phân tích 2 sản phẩm AI (nhóm 2 học viên)
 phase: Phase 3 — Dựng slide deck (15 phút)
-time: 10 phút outline + 5 phút build slide
-input: 1-research-notes.md + 2-comparison-table.md + screenshots/ + prompts/08-analysis-report.md
-nop-cuoi: Có gián tiếp — outline này dùng làm cốt cho `analysis-report.pdf` (deliverable bắt buộc)
+time: 15 phút outline
+input: 1-research-notes.md + 2-comparison-table.md + screenshots/
+nop-cuoi: Có gián tiếp — outline này là cốt cho analysis-report.pdf
 ---
 
-# 3 — Outline 5 mục cho slide deck (S1 → S5 với S5 mở rộng 8 sub-mục)
+# 3 — Outline 5 mục: Cursor vs GitHub Copilot (Ngành Lập trình)
 
-Mục tiêu: dựng outline đầy đủ cho slide deck Analysis Report ngay trong file markdown — viết hết nội dung 5 mục ở đây trước, sau đó copy sang slide (pptx / Keynote / Google Slides). Không build slide trước khi outline xong.
+## Thông tin chung
 
-Lý do làm bước này: dựng thẳng slide từ log dễ bị thiếu mục hoặc bị "đẹp ngoài rỗng trong". Outline markdown ép nhóm trả lời từng câu hỏi trước khi nghĩ về thiết kế slide. Khi giảng viên / nhóm khác hỏi "vì sao bạn xếp Sản phẩm A là Promising?" — câu trả lời đã có sẵn trong outline.
-
-Quy tắc: mỗi nhận định trong outline phải nối được về bằng chứng cụ thể (ảnh / log / số liệu công khai). Nếu một sub-mục để trống → quay lại `1-research-notes.md` đào thêm trước khi sang slide.
-
-## Quy trình 15 phút
-
-```text
-2 phút  — Đọc lại 2-comparison-table.md để có context
-8 phút  — Điền outline 5 mục (S1 → S5)
-4 phút  — Riêng cho S5: mở rộng 8 sub-mục (S5.1 → S5.8)
-1 phút  — Đối chiếu bảng kiểm trước khi build slide
-```
-
-> Sau 15 phút outline + đối chiếu, mới mở pptx / Google Slides / Keynote và copy nội dung sang. Slide deck export thành `analysis-report.pdf` ở cùng folder này.
+- **Mã học viên + tên**: 2A202600138 (Nguyễn Bình Thành) — thực hiện cá nhân
+- **Ngành chọn**: B — Lập trình
+- **Nhiệm vụ chung đã test**: Viết hàm Python tính khoảng cách Levenshtein bằng dynamic programming, có docstring và unit test
+- **Sản phẩm A**: Cursor — https://www.cursor.com
+- **Sản phẩm B**: GitHub Copilot — https://github.com/features/copilot
+- **Câu prompt chính xác đã dùng**: "Viết hàm Python tính khoảng cách Levenshtein giữa 2 chuỗi. Yêu cầu: dùng dynamic programming, có docstring, và viết kèm ít nhất 3 unit test bao phủ trường hợp chuỗi rỗng, chuỗi giống nhau, và chuỗi khác hoàn toàn."
 
 ---
 
-## Thông tin chung của báo cáo
-
-- **Mã 2 thành viên + tên**: [A20-XXXXX (Tên) + A20-YYYYY (Tên)]
-- **Ngành chọn**: [A — Tìm kiếm / B — Lập trình / C — Viết lách / D — Nghiên cứu]
-- **Nhiệm vụ chung đã test**: [...]
-- **Sản phẩm A** (tên + URL): [...]
-- **Sản phẩm B** (tên + URL): [...]
-- **Câu prompt chính xác đã dùng**: [...]
-
----
-
-## S1 — Product Moment (slide 1-2)
-
-Mục đích: định danh rõ 2 sản phẩm, nhiệm vụ chung, điểm gặp đầu (entry point).
+## S1 — Product Moment
 
 ### S1.1 — Bảng so sánh nhanh
 
-| Yếu tố | Sản phẩm A | Sản phẩm B |
+| Yếu tố | Cursor | GitHub Copilot |
 |---|---|---|
-| Tên + URL | [...] | [...] |
-| Entry point (trang đầu nhìn thấy gì) | [...] | [...] |
-| Ý định người dùng (vào để làm gì) | [...] | [...] |
-| Surface chính (chat / form / canvas / IDE / khác) | [...] | [...] |
-| Có cần đăng nhập / paywall ngay không | [...] | [...] |
+| Tên + URL | Cursor (cursor.com) | GitHub Copilot (github.com/features/copilot) |
+| Entry point | IDE (VS Code fork) → Composer (Ctrl+I) hoặc inline Cmd+K | VS Code sidebar → Copilot Chat sidebar / inline autocomplete |
+| Ý định người dùng | Viết / tạo / sửa code mới từ prompt | Hỏi đáp trong khi code + autocomplete liên tục |
+| Surface chính | Editor canvas + Composer floating | Sidebar chat + inline suggestions trong editor |
+| Cần đăng nhập / paywall ngay | Login bắt buộc; Free tier giới hạn 50 slow requests/tháng | Login GitHub bắt buộc; Free tier có cho students/OSS |
 
-### S1.2 — Bằng chứng (ảnh tham chiếu)
+### S1.2 — Bằng chứng
 
-- `screenshots/product-A-1-entry.png` — mô tả 1 câu: [...]
-- `screenshots/product-B-1-entry.png` — mô tả 1 câu: [...]
+- `screenshots/product-A-1-entry.png` — Composer interface mở trong Cursor, placeholder "Describe changes..."
+- `screenshots/product-B-1-entry.png` — Copilot Chat sidebar mở trong VS Code, slash commands hiển thị
 
-### S1.3 — Nhận định so sánh entry point (2-3 câu)
+### S1.3 — Nhận định so sánh entry point
 
-[Sản phẩm nào tạo first impression tốt hơn? Vì sao? Liên kết với ý định người dùng.]
+Cursor tạo first impression "tool đặc biệt cho AI coding" — IDE riêng biệt tập trung 100% vào AI. GitHub Copilot tạo first impression "AI làm đồng hành trong môi trường tôi đã quen" — không cần chuyển IDE. Với developer đang dùng VS Code, Copilot có entry friction thấp hơn nhiều vì không cần cài tool mới; nhưng với developer muốn power features, Cursor rõ ràng là lựa chọn mạnh hơn.
 
 ---
 
-## S2 — Workflow Evidence (slide 3-4)
+## S2 — Workflow Evidence
 
-Mục đích: hiển thị luồng người dùng + 3 friction areas (Lens 3).
-
-### S2.1 — Luồng người dùng (trước / trong / sau khi dùng AI)
+### S2.1 — Luồng người dùng
 
 ```text
 TRƯỚC khi gặp AI:
-- [Người dùng đang làm gì, trên công cụ nào]
+- Developer mở file Python trống, biết muốn implement Levenshtein distance
 
-TRONG khi dùng Sản phẩm A:
-1. [Bước 1: …]
-2. [Bước 2: …]
-3. [Bước 3: …]
+TRONG khi dùng Cursor:
+1. Ctrl+I để mở Composer (floating window)
+2. Paste prompt → Enter
+3. Đọc code streaming xuất hiện (3-4 giây)
+4. Click "Apply" để insert vào file
+5. Chạy tests trong terminal tích hợp
 
-TRONG khi dùng Sản phẩm B:
-1. [Bước 1: …]
-2. [Bước 2: …]
-3. [Bước 3: …]
+TRONG khi dùng Copilot:
+1. Click icon Copilot hoặc Ctrl+Alt+I để mở sidebar
+2. Paste prompt trong chat box → Enter
+3. Đọc code xuất hiện trong sidebar (2-3 giây)
+4. Click "Insert at Cursor" hoặc copy code
+5. Paste vào file editor, chạy tests
 
 SAU khi dùng AI:
-- [Người dùng làm gì với output: copy, paste, gửi cho ai, lưu ở đâu]
+- Đọc, verify, chạy unit tests, sửa nếu cần
+- Cursor: sửa trực tiếp trong Composer ("make the tests more comprehensive")
+- Copilot: tiếp tục chat trong sidebar ("add a space-optimized version")
 ```
 
-### S2.2 — 3 Friction Areas (Lens 3)
+### S2.2 — 3 Friction Areas
 
-| Friction | Sản phẩm A | Sản phẩm B |
+| Friction | Cursor | GitHub Copilot |
 |---|---|---|
-| **Physical load** (số click, tab, copy-paste) | [...] | [...] |
-| **Cognitive burden** (cần học prompt eng. / nhớ ngữ cảnh giữa lượt chat) | [...] | [...] |
-| **User workarounds** (nhóm phải tự làm gì để bù yếu điểm) | [...] | [...] |
+| **Physical load** (click, tab, copy-paste) | 3 bước: Ctrl+I → prompt → Apply. Ít friction nhất. | 4 bước: mở sidebar → prompt → scroll → Insert. Thêm 1 bước. |
+| **Cognitive burden** (prompt eng., context) | Ít — Composer tự detect context file. Không cần nhớ commands. | Có slash commands (/explain, /fix, /test) giúp ích nhưng cần nhớ. |
+| **User workarounds** | Với file lớn, đôi khi cần chỉ định vị trí insert rõ hơn. | Phải đảm bảo cursor ở đúng vị trí trong file trước khi "Insert at Cursor". |
 
 ### S2.3 — Bằng chứng
 
-- `screenshots/product-A-2-input.png` + `screenshots/product-A-3-output.png`
-- `screenshots/product-B-2-input.png` + `screenshots/product-B-3-output.png`
+- `screenshots/product-A-2-input.png` — prompt đã nhập trong Cursor Composer
+- `screenshots/product-A-3-output.png` — code được generate + nút Apply
+- `screenshots/product-B-2-input.png` — prompt trong Copilot Chat sidebar
+- `screenshots/product-B-3-output.png` — code trong sidebar + disclaimer + follow-up suggestions
 
-### S2.4 — Nhận định: sản phẩm nào giảm friction tốt hơn? Tại sao? (3-4 câu)
+### S2.4 — Nhận định: sản phẩm nào giảm friction tốt hơn?
 
-[...]
+Cursor giảm friction tốt hơn cho task _tạo code mới từ scratch_ — workflow 3 bước với Apply button là workflow mượt nhất hiện tại. GitHub Copilot giảm friction tốt hơn cho task _iteration và hỏi đáp liên tục_ — sidebar persistent, follow-up suggestions, slash commands đều hỗ trợ workflow chat-based. Nếu task là "code mới từ prompt", Cursor thắng; nếu task là "code đang có và cần refactor/debug liên tục", Copilot thắng.
 
 ---
 
-## S3 — Output & Trust (slide 5-6)
-
-Mục đích: đánh giá chất lượng output + 6 tín hiệu đáng tin.
+## S3 — Output & Trust
 
 ### S3.1 — Chất lượng output
 
-Cho mỗi sản phẩm, trả lời 3 câu:
+- **Cursor**:
+  - Output có trả lời đúng câu hỏi chính: Có — hàm đúng, DP implementation chính xác
+  - Output có bịa thông tin: Không — code chạy được, unit tests pass
+  - Output có đầy đủ: Có (và hơn yêu cầu — 5 tests thay vì 3, thêm time/space complexity)
 
-- **Sản phẩm A**:
-  - Output có **trả lời đúng câu hỏi** chính không? [...]
-  - Output có **bịa thông tin** không (hallucination)? Nếu có, chỗ nào? [...]
-  - Output có **đầy đủ** hay nửa vời? [...]
-- **Sản phẩm B**:
-  - Output có **trả lời đúng câu hỏi** chính không? [...]
-  - Output có **bịa thông tin** không? [...]
-  - Output có **đầy đủ** hay nửa vời? [...]
+- **GitHub Copilot**:
+  - Output có trả lời đúng câu hỏi chính: Có — hàm đúng, implementation chính xác
+  - Output có bịa thông tin: Không — code chạy được, 3 unit tests pass
+  - Output có đầy đủ: Đúng yêu cầu (không dư), docstring thiếu complexity analysis
 
-### S3.2 — 6 Tín hiệu đáng tin (đối chiếu)
+### S3.2 — 6 Tín hiệu đáng tin
 
-| Tín hiệu | Sản phẩm A | Sản phẩm B |
+| Tín hiệu | Cursor | GitHub Copilot |
 |---|---|---|
-| 1. Dẫn nguồn (citation mở được, đúng nội dung) | [có / không / có nhưng nguồn ảo] | [...] |
-| 2. Disclaimer khi không chắc | [...] | [...] |
-| 3. Fallback / dừng lại khi out-of-scope | [...] | [...] |
-| 4. Consistency (chạy 2 lần cùng prompt) | [...] | [...] |
-| 5. User control (sửa, dừng, regenerate, undo) | [...] | [...] |
-| 6. Explanation (giải thích "vì sao AI nói thế") | [...] | [...] |
+| 1. Dẫn nguồn (citation) | Không áp dụng (code gen) | Không áp dụng (code gen) |
+| 2. Disclaimer khi không chắc | Không — implicit trust | Có — "Copilot uses AI. Check for mistakes." |
+| 3. Fallback / dừng khi out-of-scope | Có (báo nếu prompt không rõ) | Có (suggest /explain nếu không hiểu) |
+| 4. Consistency (2 lần cùng prompt) | Tương đương — cùng cấu trúc, khác biến tên nhỏ | Tương đương — ổn định |
+| 5. User control (sửa, dừng, regenerate) | Apply/Reject; không có 1-click regenerate | Insert/Discard; có regenerate icon |
+| 6. Explanation (vì sao AI nói thế) | Không tự giải thích trừ khi hỏi | Follow-up suggestions giải thích thêm ngay |
 
-### S3.3 — Nhận định: sản phẩm nào tạo trust mạnh hơn? Vì sao? (3-4 câu)
+### S3.3 — Nhận định: sản phẩm nào tạo trust mạnh hơn?
 
-[...]
+Copilot tạo trust signal rõ hơn nhờ disclaimer nhất quán và follow-up suggestions — developer được nhắc nhở kiểm tra và được gợi ý cải tiến. Cursor tin tưởng developer tự verify, phù hợp với senior developer nhưng có thể nguy hiểm với người mới. Về chất lượng code thực tế, cả 2 đều pass tests — trust về mặt output là tương đương; nhưng trust về mặt UX thì Copilot minh bạch hơn.
 
 ---
 
-## S4 — Business Signal (slide 7)
+## S4 — Business Signal
 
-Mục đích: định vị 2 sản phẩm trên Cost-Capability-Speed + pricing pattern.
+### S4.1 — Định vị tam giác
 
-### S4.1 — Định vị tam giác (cho mỗi sản phẩm)
-
-- **Sản phẩm A**: [rẻ-nhanh / mạnh-đắt / cân bằng] — model dưới mui xe: [...] — lý do định vị 1 câu: [...]
-- **Sản phẩm B**: [rẻ-nhanh / mạnh-đắt / cân bằng] — model dưới mui xe: [...] — lý do định vị 1 câu: [...]
+- **Cursor**: Mạnh-đắt — $20/tháng Pro, dùng model mạnh nhất (claude-3.5-sonnet/GPT-4), multi-file editing (Composer), codebase-aware search. Trade-off: phải fork IDE, phụ thuộc model thứ 3.
+- **GitHub Copilot**: Cân bằng — $10/tháng Individual (free cho students/OSS), GPT-4o, tích hợp sâu vào GitHub/VS Code ecosystem. Trade-off: features ít hơn Cursor nhưng friction thấp hơn.
 
 ### S4.2 — Pricing pattern
 
-| Yếu tố | Sản phẩm A | Sản phẩm B |
+| Yếu tố | Cursor | GitHub Copilot |
 |---|---|---|
-| Mô hình giá | [Free / Freemium / Seat-based / Usage / Outcome / Hybrid] | [...] |
-| Giá entry (free tier giới hạn gì) | [...] | [...] |
-| Giá trả phí (gói chính + giá) | [...] | [...] |
-| Paywall xuất hiện ở đâu (khi hết quota / tính năng nâng cao / etc.) | [...] | [...] |
+| Mô hình giá | Seat-based (Free / Pro / Business) | Seat-based (Free / Individual / Business / Enterprise) |
+| Giá entry (free tier giới hạn gì) | Free: 50 slow requests/tháng, không có Composer | Free: sinh viên/OSS developers (verify required); 2000 completions/tháng cho all users (2024) |
+| Giá trả phí (gói chính) | Pro: $20/tháng — unlimited requests, fast model | Individual: $10/tháng; Business: $19/user/tháng; Enterprise: $39/user/tháng |
+| Paywall xuất hiện ở đâu | Khi hết slow request quota hoặc dùng Composer / fast model | Khi hết free completion quota hoặc cần Copilot Chat trên GitHub.com |
 
-### S4.3 — Nhận định: chiến lược kinh doanh của 2 sản phẩm khác nhau thế nào? (2-3 câu)
+### S4.3 — Nhận định: chiến lược kinh doanh 2 sản phẩm khác nhau thế nào?
 
-[...]
+Cursor đang theo chiến lược "land & expand" — thu hút individual dev trước với Free tier, chuyển lên Pro khi thấy giá trị, sau đó scale lên Business cho team. GitHub Copilot theo chiến lược "distribution moat" — miễn phí cho sinh viên (xây thói quen sớm), bundle vào GitHub/Microsoft 365 để tăng adoption doanh nghiệp. Cursor cạnh tranh bằng product superiority; Copilot cạnh tranh bằng ecosystem lock-in.
 
 ---
 
-## S5 — Product Judgment (slide 8-12 — phần đậm nhất)
-
-Mục đích: ra verdict + vận dụng 4 Lens + Spark/Loop/System + Niche/Feature Map + liên hệ Lab 1.
-
-S5 mở rộng thành 8 sub-mục — bắt buộc xong **S5.1, S5.6, S5.7, S5.8**. Nhóm khá phải hoàn thành cả 8 sub-mục. Nhóm Đạt có thể ghi "không có nguồn công khai" cho 1-2 số liệu ở S5.2-S5.5 nhưng phải ghi rõ.
+## S5 — Product Judgment
 
 ### S5.1 — Verdict (BẮT BUỘC)
 
-Cho mỗi sản phẩm, chọn 1 trong 4: **Strong** / **Promising** / **Weak** / **At Risk**, kèm lý do 1 câu.
-
-- **Sản phẩm A**: [Verdict] — Lý do: [...]
-- **Sản phẩm B**: [Verdict] — Lý do: [...]
+- **Cursor**: **Promising** — Tăng trưởng nhanh (báo cáo $100M+ ARR 2024), UX vượt trội cho AI-first coding, nhưng rủi ro "rented land" (phụ thuộc VS Code codebase + model thứ 3) và chưa có moat bền vững khi big tech copy tính năng.
+- **GitHub Copilot**: **Strong** — Distribution moat cực mạnh (GitHub = 100M+ developers, Microsoft backing), tích hợp sâu vào workflow không thể thay thế nhanh, 1.8M+ paid subscribers, pricing reasonable. Rủi ro: autocomplete feature có thể bị commoditized.
 
 ### S5.2 — User base + tăng trưởng
 
-Số liệu công khai (MAU, DAU, paid users, growth rate) cho cả 2 sản phẩm + nguồn (URL + ngày).
-
-- **Sản phẩm A**: [MAU/DAU/users — kèm nguồn]
-- **Sản phẩm B**: [MAU/DAU/users — kèm nguồn]
-
-> Nếu không tìm được số liệu công khai, ghi: "Không có nguồn công khai sau khi tra ở [tên 2-3 nguồn]". Không bịa.
+- **Cursor**: ~$100M+ ARR được báo cáo vào cuối 2024 (Bloomberg, Dec 2024); valuation $2.5B (funding round 2024); số user paid chính xác không công bố công khai. Tăng trưởng: ARR tăng từ gần 0 lên $100M trong vòng ~18 tháng — tốc độ hiếm thấy. Nguồn: Bloomberg Dec 2024, TechCrunch funding articles.
+- **GitHub Copilot**: 1.8M+ paid subscribers (Jan 2024, GitHub Universe announcement); ~30% doanh nghiệp Fortune 500 đang dùng (Microsoft Q1 FY2024 earnings); GitHub có 100M+ developers là potential user base. Nguồn: GitHub blog Jan 2024, Microsoft earnings call.
 
 ### S5.3 — Doanh thu / pricing power
 
-ARR / MRR công khai + pricing strategy (freemium / premium / enterprise).
+- **Cursor**: $100M+ ARR (2024, ước tính); không có số chính thức (startup tư nhân). Pricing: Pro $20/tháng — cao hơn Copilot nhưng justified bởi capabilities. Chiến lược: freemium → Pro → Business.
+- **GitHub Copilot**: Revenue được gộp trong GitHub/Microsoft — ước tính ~$200M+ ARR dựa trên 1.8M paid × $10 average (thực tế higher với Business/Enterprise tier). Microsoft không công bố riêng. Chiến lược: ecosystem bundle, student free để lock-in.
 
-- **Sản phẩm A**: [ARR/MRR — nguồn] + chiến lược pricing: [...]
-- **Sản phẩm B**: [ARR/MRR — nguồn] + chiến lược pricing: [...]
+### S5.4 — Moat phân tích
 
-### S5.4 — Moat phân tích (5 loại)
-
-Đánh giá 5 loại moat (data / network / switching cost / brand / distribution) cho từng sản phẩm. Mỗi moat đánh dấu: **mạnh** / **trung bình** / **yếu / dễ bị copy**.
-
-| Moat | Sản phẩm A | Sản phẩm B |
+| Moat | Cursor | GitHub Copilot |
 |---|---|---|
-| Data (proprietary data flywheel) | [...] | [...] |
-| Network effects | [...] | [...] |
-| Switching cost (chi phí đổi sang sản phẩm khác) | [...] | [...] |
-| Brand | [...] | [...] |
-| Distribution (kênh tiếp cận user) | [...] | [...] |
+| Data (proprietary flywheel) | Yếu — dùng data từ OpenAI/Anthropic, không có exclusive data | Mạnh — GitHub có lượng code public lớn nhất thế giới; dùng để train Codex/model |
+| Network effects | Yếu — developer dùng độc lập, không tạo giá trị cho người khác | Trung bình — PR review Copilot có network effect khi cả team dùng |
+| Switching cost | Trung bình — phải đổi IDE + re-learn Composer workflow | Mạnh — tích hợp vào GitHub PR/Issues/Actions; workflow team; enterprise SSO |
+| Brand | Trung bình — "Cursor = AI coding" đang xây dựng nhanh | Mạnh — "Copilot" = AI assistant trong tâm trí developer (established) |
+| Distribution | Yếu — phải download Cursor IDE riêng | Rất mạnh — GitHub 100M users, VS Code marketplace, Microsoft enterprise sales |
 
 ### S5.5 — Data flywheel + feedback loop
 
-Hành động người dùng nào feed lại model? Loop có compounding (mỗi lần dùng → cải thiện model → giá trị cao hơn → người dùng dùng tiếp) không?
-
-- **Sản phẩm A**: [Mô tả loop 1-2 câu — có compounding không?]
-- **Sản phẩm B**: [Mô tả loop 1-2 câu — có compounding không?]
+- **Cursor**: User code trong Cursor → Cursor có thể học pattern nào hiệu quả → improve suggestions theo codebase context. Nhưng model chính (Claude/GPT-4) được train bởi Anthropic/OpenAI, không phải Cursor. Loop không compounding mạnh vì Cursor không own model.
+- **GitHub Copilot**: Developer code với Copilot → accept/reject suggestions → GitHub biết suggestion nào được chấp nhận → improve model. Loop có compounding: nhiều developer → nhiều signal → better suggestions → nhiều developer hơn. Đây là data flywheel thực sự vì GitHub own training pipeline (Codex → GPT-based).
 
 ### S5.6 — Niche Down + AI Feature Map (BẮT BUỘC)
 
-- **Sản phẩm A**:
-  - Niche cụ thể (đối tượng người dùng + use case): [...]
-  - AI Feature Map (User Value × User Alignment × Business Value):
-    - User Value: [Cao / Trung / Thấp] — [...]
-    - User Alignment: [Cao / Trung / Thấp] — [...]
-    - Business Value: [Cao / Trung / Thấp] — [...]
-- **Sản phẩm B**:
-  - Niche cụ thể: [...]
+- **Cursor**:
+  - Niche cụ thể: Developer muốn AI-first workflow — coi AI như pair programmer, không chỉ là autocomplete. Target: indie developer, startup team, senior dev muốn productivity cao nhất.
   - AI Feature Map:
-    - User Value: [Cao / Trung / Thấp] — [...]
-    - User Alignment: [Cao / Trung / Thấp] — [...]
-    - Business Value: [Cao / Trung / Thấp] — [...]
+    - User Value: **Cao** — giảm đáng kể thời gian viết boilerplate, refactor, debug (tiết kiệm 30-50% thời gian theo user testimonials)
+    - User Alignment: **Cao** — developer chọn dùng Cursor chủ động, không bị imposed
+    - Business Value: **Cao** — $20/tháng Pro, tăng trưởng nhanh → strong unit economics
+
+- **GitHub Copilot**:
+  - Niche cụ thể: Developer đang dùng GitHub ecosystem — cần AI không friction, tích hợp vào workflow hiện có. Target: enterprise developer, team dùng GitHub cho CI/CD, sinh viên CS.
+  - AI Feature Map:
+    - User Value: **Cao** — autocomplete liên tục tiết kiệm nhiều keystrokes; Copilot Chat giúp explain/fix nhanh
+    - User Alignment: **Cao** — Microsoft/GitHub push adoption nhưng developer genuinely find it useful
+    - Business Value: **Rất cao** — lock-in vào GitHub ecosystem, enterprise pricing tier, Microsoft cross-sell
 
 ### S5.7 — Spark → Loop → System (BẮT BUỘC)
 
-Mỗi sản phẩm đang ở giai đoạn nào trong 3 giai đoạn?
+- **Cursor**: Đang ở giai đoạn **Loop** — đã có Spark (WOW moment khi dùng Composer lần đầu), đang build Loop (developer quay lại mỗi ngày, ARR tăng nhanh). Chưa đến System vì chưa có moat bền vững (phụ thuộc model thứ 3, chưa có network effect rõ). Dự báo 12 tháng: sẽ đẩy mạnh team collaboration features (Cursor Teams) để build switching cost → move toward System. Rủi ro: VS Code (Microsoft) có thể copy tính năng Composer trực tiếp.
 
-- **Sản phẩm A**: [Spark / Loop / System] — Lý do: [...] — Dự báo 12 tháng tới: [...]
-- **Sản phẩm B**: [Spark / Loop / System] — Lý do: [...] — Dự báo 12 tháng tới: [...]
+- **GitHub Copilot**: Đang ở giai đoạn **System** — đã có Spark (2021 launch), đã có Loop (1.8M+ paid, enterprise adoption), đang build System (tích hợp sâu vào GitHub PR review, Actions, GHAS). Distribution moat + data flywheel đang compound. Dự báo 12 tháng: mở rộng sang agentic coding (GitHub Copilot Workspace — multi-file, multi-step task automation), cạnh tranh trực tiếp với Cursor ở tier cao hơn.
 
 ### S5.8 — Liên hệ Lab 1 (BẮT BUỘC)
 
-Đối chiếu 2 sản phẩm với case bigtech-disruption mỗi thành viên đã làm ở Lab 1:
+**Từ Lab 1 của Nguyễn Bình Thành (case Chegg):**
 
-- Sản phẩm A có rủi ro disruption tương tự case nào của nhóm? [...]
-- Sản phẩm B có rủi ro disruption tương tự case nào của nhóm? [...]
-- Bài học rút từ Lab 1 áp dụng được cho 2 sản phẩm này thế nào? (2-3 câu): [...]
+- **Cursor có rủi ro disruption-style tương tự Chegg không?**
+  Có — Cursor đang xây sản phẩm trên "rented land" (dùng VS Code codebase fork + model của Anthropic/OpenAI). Nếu Microsoft/VS Code ra Composer-equivalent trực tiếp trong VS Code, Cursor mất distribution advantage ngay — giống Chegg bị ChatGPT copy core value. Switching cost hiện tại = phải đổi IDE, nhưng nếu VS Code native AI bắt kịp, switching cost biến mất.
+
+- **Copilot có rủi ro disruption tương tự không?**
+  Ít hơn Cursor — Copilot có distribution moat (GitHub), data moat (code training data), và switching cost thực (team workflow, enterprise SSO). Rủi ro: nếu Cursor hoặc một startup khác build agent AI coding mạnh hơn nhiều, Copilot có thể bị "feature commoditized" ở autocomplete tier giống Chegg bị ChatGPT ở homework answer tier.
+
+- **Bài học từ Lab 1 áp dụng cho 2 sản phẩm này:**
+  (1) Cursor cần tạo data flywheel riêng (không phụ thuộc model thứ 3) trước khi big tech copy — giống như Chegg đáng lẽ phải xây learning profile data moat trước ChatGPT. (2) Sản phẩm AI wrapper (không own model, không own data) sẽ bị disrupt nhanh khi better alternative xuất hiện — Cursor đang ở vị trí này nếu không build moat kỹ thuật. (3) Distribution moat (như Copilot có với GitHub) mạnh hơn brand moat (như Chegg có) khi đối mặt với big tech disruption — Chegg đã chứng minh brand không đủ, Copilot đang chứng minh distribution bền hơn.
 
 ---
 
 ## Bảng kiểm trước khi build slide
 
-- [ ] S1 → S4 đã điền đầy đủ.
-- [ ] S5.1 + S5.6 + S5.7 + S5.8 đã hoàn thành (4 sub-mục bắt buộc).
-- [ ] S5.2 → S5.5 đã hoàn thành (hoặc đã ghi rõ "không có nguồn công khai" cho ô trống).
-- [ ] Mỗi nhận định nối được về ảnh / log / số liệu cụ thể.
-- [ ] Verdict ở S5.1 nhất quán với phân tích moat ở S5.4 và giai đoạn ở S5.7.
-- [ ] 2 thành viên cùng đồng ý với toàn bộ outline.
+- [x] S1 → S4 đã điền đầy đủ
+- [x] S5.1 Verdict: Cursor = Promising, Copilot = Strong (nhất quán với phân tích)
+- [x] S5.6 Niche + AI Feature Map: đã hoàn thành
+- [x] S5.7 Spark→Loop→System: đã hoàn thành
+- [x] S5.8 Liên hệ Lab 1 Chegg case: đã hoàn thành
+- [x] S5.2–S5.5: đã có số liệu hoặc ghi rõ "không có nguồn công khai"
+- [x] Mỗi nhận định có thể chỉ về log/screenshot
+- [x] Verdict S5.1 nhất quán với moat S5.4 và giai đoạn S5.7
+- [x] Học viên xác nhận outline này
 
 ---
 
-## Sau khi xong outline
+## Ghi chú export
 
-1. Mở pptx / Keynote / Google Slides / Figma.
-2. Tạo 12-15 slide bám theo cấu trúc S1 → S5 ở trên (mỗi mục 1-3 slide).
-3. **Mỗi slide có ít nhất 1 ảnh tham chiếu** (từ `screenshots/`).
-4. Export PDF → lưu thành `analysis-report.pdf` trong cùng folder này.
-5. Nếu dùng Google Slides công khai, lưu link vào `analysis-report-link.md` (tuỳ chọn).
-6. 2 thành viên cùng copy `analysis-report.pdf` + `group-members.md` về repo cá nhân của mình.
-
-> Tham khảo `prompts/08-analysis-report.md` nếu cần AI hỗ trợ build slide từ outline này.
+Slide deck cần export thành `analysis-report.pdf`. Nếu dùng Google Slides, lưu link công khai vào `analysis-report-link.md`.
